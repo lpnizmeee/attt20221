@@ -41,8 +41,10 @@ def decrypt__ECC_user(encryptedMsg, pubKey):
     plaintext = decrypt_AES_GCM(ciphertext, nonce, authTag, secretKey)
     return plaintext
 
-msg = b'Text to be encrypted by ECC public key and ' \
-      b'decrypted by its corresponding ECC private key'
+# msg = b'Text to be encrypted by ECC public key and ' \
+#       b'decrypted by its corresponding ECC private key'
+msg = input("Enter the Message need encrypt: ").encode('ascii')
+
 print("*******************")
 print("original msg:", msg)
 print("*******************")
