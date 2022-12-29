@@ -63,10 +63,14 @@ encryptedMsgObj = {
 print("encrypted msg:")
 for keys,values in encryptedMsgObj.items():
     print(keys, ": ",values)
+
+# for admin    
 print("*******************")
 decryptedMsg__admin = decrypt_ECC_admin(encryptedMsg, privKey)
-decryptedMsg__user = decrypt__ECC_user(encryptedMsg, pubKey)
 print("decrypted msg__admin:", decryptedMsg__admin)
 print("*******************")
+
+# for user
+decryptedMsg__user = decrypt__ECC_user(encryptedMsg, pubKey)
 print("decrypted msg__user:", decryptedMsg__user)
 print("*******************")
